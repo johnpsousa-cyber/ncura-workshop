@@ -28,7 +28,7 @@
     <div class="max-w-5xl mx-auto">
         <header class="mb-10 text-center">
             <h1 class="text-4xl font-extrabold text-blue-900 mb-2">Pre-Award Checklist Generator</h1>
-            <p class="text-slate-600 text-lg">Automatically extract required documents, forms, and details from NOFOs and RFAs.</p>
+            <p class="text-slate-600 text-lg">Automatically extract required documents, forms, eligibility details, and deadlines from NOFOs and RFAs.</p>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -71,7 +71,7 @@
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                     <h3 class="text-xl font-semibold text-slate-700">Analyzing Document...</h3>
-                    <p class="text-slate-500 mt-2">Extracting requirements, forms, and deadlines. This may take a minute.</p>
+                    <p class="text-slate-500 mt-2">Extracting requirements, eligibility, forms, and deadlines. This may take a minute.</p>
                 </div>
 
                 <div id="emptyState" class="h-full flex flex-col items-center justify-center text-center mt-20 text-slate-400">
@@ -185,11 +185,12 @@ Your task is to generate a highly detailed and structured "Pre-Award Checklist" 
 
 Please include:
 1. Basic Details: Funding agency, grant title, mechanism/opportunity number, and all critical deadlines (Letter of Intent, Full Application, Internal deadlines if implied).
-2. Formatting Rules: Font size, margins, spacing, and any specific system requirements (e.g., ASSIST, Workspace, Research.gov).
-3. Required Documents & Forms: Provide a clear, tabular or bulleted checklist of every required document (e.g., Project Summary, Research Strategy, Biosketches, Budget, Facilities). 
+2. Eligibility Information: Detail who can apply. Include eligible organization types (e.g., higher education, non-profits, small businesses) and any specific investigator/PI eligibility requirements (e.g., career stage, citizenship, or limit on the number of applications per institution).
+3. Formatting Rules: Font size, margins, spacing, and any specific system requirements (e.g., ASSIST, Workspace, Research.gov).
+4. Required Documents & Forms: Provide a clear, tabular or bulleted checklist of every required document (e.g., Project Summary, Research Strategy, Biosketches, Budget, Facilities). 
    - For each document, list the specific page limits.
    - For each document, list specific nuances or instructions mentioned in the RFA.
-4. Budget Rules: Cost-sharing requirements, indirect cost (F&A) limits, or salary caps.
+5. Budget Rules: Cost-sharing requirements, indirect cost (F&A) limits, or salary caps.
 
 Organize the output beautifully using Markdown headers, lists, and tables so it is easy to read.
 `;
